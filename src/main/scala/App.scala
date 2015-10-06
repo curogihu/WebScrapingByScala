@@ -1,3 +1,5 @@
+import java.util
+
 import scala.collection.JavaConversions._
 
 import org.openqa.selenium.htmlunit.HtmlUnitDriver
@@ -18,26 +20,30 @@ object App {
     scrape(driver)
   }
 
-  private def getTitle(driver: HtmlUnitDriver): String = {
-    "1"
-  }
-
   private def scrape(driver: HtmlUnitDriver): Unit = {
     println(s"title: ${driver.getTitle()}")
 
     driver.findElementByXPath("//div[@id='js-bukkenList']")
       .findElements(By.xpath("//div[@class='property property--highlight js-property js-cassetLink']"))
       .foreach { we: WebElement =>
-        val headerElem = we.findElement(By.className("property-header"))
-        val propertyElem = we.findElement(By.className("property-body"))
+        val headerElem: WebElement = we.findElement(By.className("property-header"))
+        val propertyElem: WebElement = we.findElement(By.className("property-body"))
 
         // get title ok
         //println(headerElem.findElement(By.className("js-cassetLinkHref")).getText)
-        println(getHouseName(headerElem))
-        println(getHouseURL(headerElem))
+        println("House name: " + getHouseName(headerElem))
+        println("URL of house info: " + getHouseURL(headerElem))
+        println("House image: " + getImage(propertyElem))
+        println("House rent:" + getRent(propertyElem).replaceAll("\n", "/"))
         println("----------------------")
 
-        println(getImage(propertyElem))
+        println("House other rent:" + getOtherRnet(propertyElem).replaceAll("\n", "/"))
+        println("House room info:" + getRoomInfo(propertyElem).replaceAll("\n", "/"))
+        println("House building info:" + getBuildingInfo(propertyElem).replaceAll("\n", "/"))
+        println("Access:" + getHowToAccess(propertyElem).replaceAll("\n", "/"))
+        println("----------------------")
+
+        println("Property Company Info:" + getPropertyCompanyInfo(propertyElem).replaceAll("\n", "/"))
         println("----------------------")
         println()
     }
@@ -49,34 +55,38 @@ object App {
   private def getHouseURL(headerWe: WebElement): String =
     headerWe.findElement(By.className("js-cassetLinkHref")).getAttribute("href")
 
-  private def getImage(propertyWe: WebElement): Unit =
+  // only reading first picture
+  private def getImage(propertyWe: WebElement): String =
+  // somehow using xpath doesn't fit my expectation.
+//    propertyWe.findElement(By.xpath("//img[@class='js-noContextMenu js-linkImage js-scrollLazy js-adjustImg']")).getAttribute("rel")
+      propertyWe.findElement(By.className("js-linkImage")).getAttribute("rel")
 
-//        propertyWe.findElement(By.xpath("//img[@class='js-noContextMenu js-linkImage js-scrollLazy js-adjustImg']")).getAttribute("rel")
-    for(elem <- propertyWe.findElements(By.xpath("//img[@class='js-noContextMenu js-linkImage js-scrollLazy js-adjustImg']"))){
-      println(elem.getAttribute("rel"))
-    }
+//    for(elem <- propertyWe.findElements(By.xpath("//img[@class='js-noContextMenu js-linkImage js-scrollLazy js-adjustImg']"))){
+//      println(elem.getAttribute("rel"))
+//    }
 
+  private def getRent(propertyWe: WebElement): String =
+    propertyWe.findElement(By.className("detailbox-property--col1")).getText
 
+  private def getOtherRnet(propertyWe: WebElement): String =
+    propertyWe.findElement(By.className("detailbox-property--col2")).getText
 
+  // this tag doesn't have specific class name.
+  private def getRoomInfo(propertyWe: WebElement): String =
+    // Return type of findElements is util.List(not Scala, but Java)
+    propertyWe.findElements(By.className("detailbox-property--col3")).get(0).getText
 
+  // this tag doesn't have specific class name.
+  private def getBuildingInfo(propertyWe: WebElement): String =
+    propertyWe.findElements(By.className("detailbox-property--col3")).get(1).getText
 
- /*
-    driver.findElementByXPath("//div[@class='property property--highlight js-property js-cassetLink']")
-      .findElements(By.xpath("//a[@class='js-cassetLinkHref']"))
-      .foreach { we: WebElement =>
+  // this tag doesn't have specific class name.
+  private def getAddress(propertyWe: WebElement): String =
+    propertyWe.findElements(By.className("detailbox-property-col")).get(4).getText
 
-      // これはok
+  private def getHowToAccess(propertyWe: WebElement): String =
+    propertyWe.findElement(By.className("detailnote-box")).getText
 
-      // １件ごとに分けてやろうとすると最初の１件しか反応されない
-      println("Start -----------")
-      println(s"title: ${we.getText()}")
-      println(s"link: ${we.getAttribute("href")}")
-      println("End   -----------")
-      println()
-
-    }
-    */
-
-
-
+  private def getPropertyCompanyInfo(propertyWe: WebElement): String =
+    propertyWe.findElement(By.className("detailnote-box-item")).getText
 }
