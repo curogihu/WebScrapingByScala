@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SBT: org.seleniumhq.webdriver:webdriver-common:0.9.7376:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.seleniumhq.webdriver/webdriver-common/jars/webdriver-common-0.9.7376.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
