@@ -57,14 +57,13 @@ object App {
 
   // only reading first picture
   private def getImage(propertyWe: WebElement): String =
-  // somehow using xpath doesn't fit my expectation.
-//    propertyWe.findElement(By.xpath("//img[@class='js-noContextMenu js-linkImage js-scrollLazy js-adjustImg']")).getAttribute("rel")
       propertyWe.findElement(By.className("js-linkImage")).getAttribute("rel")
 
-//    for(elem <- propertyWe.findElements(By.xpath("//img[@class='js-noContextMenu js-linkImage js-scrollLazy js-adjustImg']"))){
-//      println(elem.getAttribute("rel"))
-//    }
-
+  /*
+  private def getImages(propertyWe: WebElement): Unit =
+    val tmp : util.ArrayList[String] = By.findElements(By.className("js-linkImage"))
+*/
+  
   private def getRent(propertyWe: WebElement): String =
     propertyWe.findElement(By.className("detailbox-property--col1")).getText
 

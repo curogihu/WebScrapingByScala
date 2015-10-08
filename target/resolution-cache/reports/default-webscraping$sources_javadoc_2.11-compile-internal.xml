@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20151006105556"/>
+		date="20151007223325"/>
 	<dependencies>
 		<module organisation="xml-apis" name="xml-apis">
 			<revision name="1.3.04" status="release" pubdate="20061222053752" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://xml.apache.org/commons/components/external/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="5">

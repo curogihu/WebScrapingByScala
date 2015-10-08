@@ -6,7 +6,7 @@
 [debug] == resolving dependencies for default#webscraping$sources_javadoc_2.11;1.0 [compile]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.7 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.11.7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@57ffef6a
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@192de974
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7
 [debug] 	found org.scala-lang#scala-library;2.11.7 in sbt-chain
 [debug] 	[2.11.7] org.scala-lang#scala-library;2.11.7
@@ -15,7 +15,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.7 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->org.seleniumhq.webdriver#webdriver-htmlunit;0.9.7376 [compile->default(compile)]
 [info] Resolving org.seleniumhq.webdriver#webdriver-htmlunit;0.9.7376 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1fbb3fc1
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6b336453
 [debug] sbt-chain: module revision found in cache: org.seleniumhq.webdriver#webdriver-htmlunit;0.9.7376
 [debug] 	found org.seleniumhq.webdriver#webdriver-htmlunit;0.9.7376 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->org.seleniumhq.webdriver#webdriver-htmlunit;0.9.7376 [compile->runtime]
@@ -23,7 +23,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->org.seleniumhq.webdriver#webdriver-htmlunit;0.9.7376 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->org.seleniumhq.webdriver#webdriver-common;0.9.7376 [compile->default(compile)]
 [info] Resolving org.seleniumhq.webdriver#webdriver-common;0.9.7376 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3e03d826
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7fb2d2b3
 [debug] sbt-chain: module revision found in cache: org.seleniumhq.webdriver#webdriver-common;0.9.7376
 [debug] 	found org.seleniumhq.webdriver#webdriver-common;0.9.7376 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->org.seleniumhq.webdriver#webdriver-common;0.9.7376 [compile->runtime]
@@ -31,7 +31,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->org.seleniumhq.webdriver#webdriver-common;0.9.7376 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->net.sourceforge.htmlunit#htmlunit;2.6 [compile->default(compile)]
 [info] Resolving net.sourceforge.htmlunit#htmlunit;2.6 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@24b71f9
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6776859f
 [debug] sbt-chain: module revision found in cache: net.sourceforge.htmlunit#htmlunit;2.6
 [debug] 	found net.sourceforge.htmlunit#htmlunit;2.6 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->net.sourceforge.htmlunit#htmlunit;2.6 [compile->runtime]
@@ -39,7 +39,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->net.sourceforge.htmlunit#htmlunit;2.6 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->xalan#xalan;2.7.1 [compile->default(compile)]
 [info] Resolving xalan#xalan;2.7.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@11b2dfd5
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@548bdcb0
 [debug] sbt-chain: module revision found in cache: xalan#xalan;2.7.1
 [debug] 	found xalan#xalan;2.7.1 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->xalan#xalan;2.7.1 [compile->runtime]
@@ -47,7 +47,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->xalan#xalan;2.7.1 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->xml-apis#xml-apis;1.3.04 [compile->default(compile)]
 [info] Resolving xml-apis#xml-apis;1.3.04 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3a66dce0
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4f930ad9
 [debug] sbt-chain: module revision found in cache: xml-apis#xml-apis;1.3.04
 [debug] 	found xml-apis#xml-apis;1.3.04 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->xml-apis#xml-apis;1.3.04 [compile->runtime]
@@ -55,7 +55,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->xml-apis#xml-apis;1.3.04 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-collections#commons-collections;3.2.1 [compile->default(compile)]
 [info] Resolving commons-collections#commons-collections;3.2.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3eecee52
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@53615b9b
 [debug] sbt-chain: module revision found in cache: commons-collections#commons-collections;3.2.1
 [debug] 	found commons-collections#commons-collections;3.2.1 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-collections#commons-collections;3.2.1 [compile->runtime]
@@ -63,7 +63,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-collections#commons-collections;3.2.1 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-lang#commons-lang;2.4 [compile->default(compile)]
 [info] Resolving commons-lang#commons-lang;2.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@394d92ae
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@68a1ea57
 [debug] sbt-chain: module revision found in cache: commons-lang#commons-lang;2.4
 [debug] 	found commons-lang#commons-lang;2.4 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-lang#commons-lang;2.4 [compile->runtime]
@@ -71,7 +71,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-lang#commons-lang;2.4 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-httpclient#commons-httpclient;3.1 [compile->default(compile)]
 [info] Resolving commons-httpclient#commons-httpclient;3.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@42915b4d
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@16ab3ece
 [debug] sbt-chain: module revision found in cache: commons-httpclient#commons-httpclient;3.1
 [debug] 	found commons-httpclient#commons-httpclient;3.1 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-httpclient#commons-httpclient;3.1 [compile->runtime]
@@ -79,7 +79,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-httpclient#commons-httpclient;3.1 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-codec#commons-codec;1.4 [compile->default(compile)]
 [info] Resolving commons-codec#commons-codec;1.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4fbb5ae7
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1c4e4876
 [debug] sbt-chain: module revision found in cache: commons-codec#commons-codec;1.4
 [debug] 	found commons-codec#commons-codec;1.4 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-codec#commons-codec;1.4 [compile->runtime]
@@ -87,7 +87,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-codec#commons-codec;1.4 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->net.sourceforge.htmlunit#htmlunit-core-js;2.6 [compile->default(compile)]
 [info] Resolving net.sourceforge.htmlunit#htmlunit-core-js;2.6 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@604521f0
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@326463cf
 [debug] sbt-chain: module revision found in cache: net.sourceforge.htmlunit#htmlunit-core-js;2.6
 [debug] 	found net.sourceforge.htmlunit#htmlunit-core-js;2.6 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->net.sourceforge.htmlunit#htmlunit-core-js;2.6 [compile->runtime]
@@ -95,7 +95,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->net.sourceforge.htmlunit#htmlunit-core-js;2.6 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->net.sourceforge.nekohtml#nekohtml;1.9.13 [compile->default(compile)]
 [info] Resolving net.sourceforge.nekohtml#nekohtml;1.9.13 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@71fd65fe
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@75825c1c
 [debug] sbt-chain: module revision found in cache: net.sourceforge.nekohtml#nekohtml;1.9.13
 [debug] 	found net.sourceforge.nekohtml#nekohtml;1.9.13 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->net.sourceforge.nekohtml#nekohtml;1.9.13 [compile->runtime]
@@ -103,7 +103,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->net.sourceforge.nekohtml#nekohtml;1.9.13 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->net.sourceforge.cssparser#cssparser;0.9.5 [compile->default(compile)]
 [info] Resolving net.sourceforge.cssparser#cssparser;0.9.5 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@a4e388
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5a2243e2
 [debug] sbt-chain: module revision found in cache: net.sourceforge.cssparser#cssparser;0.9.5
 [debug] 	found net.sourceforge.cssparser#cssparser;0.9.5 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->net.sourceforge.cssparser#cssparser;0.9.5 [compile->runtime]
@@ -111,7 +111,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->net.sourceforge.cssparser#cssparser;0.9.5 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->org.w3c.css#sac;1.3 [compile->default(compile)]
 [info] Resolving org.w3c.css#sac;1.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@938f9bf
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3047eaa2
 [debug] sbt-chain: module revision found in cache: org.w3c.css#sac;1.3
 [debug] 	found org.w3c.css#sac;1.3 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->org.w3c.css#sac;1.3 [compile->runtime]
@@ -119,7 +119,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->org.w3c.css#sac;1.3 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-io#commons-io;1.4 [compile->default(compile)]
 [info] Resolving commons-io#commons-io;1.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1bf36584
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@66c4f30
 [debug] sbt-chain: module revision found in cache: commons-io#commons-io;1.4
 [debug] 	found commons-io#commons-io;1.4 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-io#commons-io;1.4 [compile->runtime]
@@ -127,7 +127,7 @@
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-io#commons-io;1.4 [compile->master]
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-logging#commons-logging;1.1.1 [compile->default(compile)]
 [info] Resolving commons-logging#commons-logging;1.1.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1d8499c8
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5a475e81
 [debug] sbt-chain: module revision found in cache: commons-logging#commons-logging;1.1.1
 [debug] 	found commons-logging#commons-logging;1.1.1 in sbt-chain
 [debug] == resolving dependencies default#webscraping$sources_javadoc_2.11;1.0->commons-logging#commons-logging;1.1.1 [compile->runtime]
@@ -1165,7 +1165,7 @@
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(doc)
-[debug] :: resolution report :: resolve 740ms :: artifacts dl 48ms
+[debug] :: resolution report :: resolve 819ms :: artifacts dl 85ms
 [debug] 	report for default#webscraping$sources_javadoc_2.11;1.0 compile produced in /Users/hikozuma/Desktop/Scala_SelfLearning/WebScraping/target/resolution-cache/reports/default-webscraping$sources_javadoc_2.11-compile.xml
 [debug] 	report for default#webscraping$sources_javadoc_2.11;1.0 runtime produced in /Users/hikozuma/Desktop/Scala_SelfLearning/WebScraping/target/resolution-cache/reports/default-webscraping$sources_javadoc_2.11-runtime.xml
 [debug] 	report for default#webscraping$sources_javadoc_2.11;1.0 test produced in /Users/hikozuma/Desktop/Scala_SelfLearning/WebScraping/target/resolution-cache/reports/default-webscraping$sources_javadoc_2.11-test.xml
@@ -1179,4 +1179,4 @@
 [debug] 	report for default#webscraping$sources_javadoc_2.11;1.0 docs produced in /Users/hikozuma/Desktop/Scala_SelfLearning/WebScraping/target/resolution-cache/reports/default-webscraping$sources_javadoc_2.11-docs.xml
 [debug] 	report for default#webscraping$sources_javadoc_2.11;1.0 pom produced in /Users/hikozuma/Desktop/Scala_SelfLearning/WebScraping/target/resolution-cache/reports/default-webscraping$sources_javadoc_2.11-pom.xml
 [debug] 	report for default#webscraping$sources_javadoc_2.11;1.0 scala-tool produced in /Users/hikozuma/Desktop/Scala_SelfLearning/WebScraping/target/resolution-cache/reports/default-webscraping$sources_javadoc_2.11-scala-tool.xml
-[debug] 	resolve done (740ms resolve - 48ms download)
+[debug] 	resolve done (819ms resolve - 85ms download)
