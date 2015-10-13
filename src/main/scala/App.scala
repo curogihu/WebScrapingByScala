@@ -1,9 +1,11 @@
-import java.util
+import org.openqa.selenium.htmlunit.HtmlUnitDriver
+import org.openqa.selenium.{By, WebElement}
 
 import scala.collection.JavaConversions._
+import scala.collection.JavaConverters._
+import scala.collection.mutable
 
-import org.openqa.selenium.htmlunit.HtmlUnitDriver
-import org.openqa.selenium.{ By, WebElement }
+//import scala.collection.mutable.ListBuffer
 
 object App {
 
@@ -16,8 +18,57 @@ object App {
 
   private def request(url: String): Unit = {
     val driver = new HtmlUnitDriver()
+
     driver.get(url)
+/*
     scrape(driver)
+*/
+
+    val htmlTuple: (List[WebElement], List[WebElement]) = getContents(driver)
+
+    println("--- Web scraping [start] --------")
+    showContents(htmlTuple._1, htmlTuple._2)
+    println("--- Web scraping [ end ] --------")
+  }
+
+  private def getContents(driver: HtmlUnitDriver) = {
+    var headerElemList: List[WebElement] = List()
+    var propertyElemList: List[WebElement] = List()
+
+    driver.findElementByXPath("//div[@id='js-bukkenList']")
+      .findElements(By.xpath("//div[@class='property property--highlight js-property js-cassetLink']"))
+      .foreach { we: WebElement =>
+
+        headerElemList = headerElemList ++ List(we.findElement(By.className("property-header")))
+        propertyElemList = propertyElemList ++ List(we.findElement(By.className("property-body")))
+      }
+
+    (headerElemList, propertyElemList)
+  }
+
+  // rewrite for easily using on Play2 framework
+  private def showContents(headers: List[WebElement], properties: List[WebElement]) = {
+    // show each room contents
+    for(header <- headers; property <- properties){
+      println("House name: " + getHouseName(header))
+      println("URL of house info: " + getHouseURL(header))
+      println("House rent:" + getRent(property).replaceAll("\n", "/"))
+
+      println("----------------------")
+      println("Images are the following:")
+      showRoomImages(getRoomImages(property))
+
+      println("----------------------")
+      println("House other rent:" + getOtherRnet(property).replaceAll("\n", "/"))
+      println("House room info:" + getRoomInfo(property).replaceAll("\n", "/"))
+      println("House building info:" + getBuildingInfo(property).replaceAll("\n", "/"))
+      println("Access:" + getHowToAccess(property).replaceAll("\n", "/"))
+      println("----------------------")
+
+      println("Property Company Info:" + getPropertyCompanyInfo(property).replaceAll("\n", "/"))
+      println("----------------------")
+      println()
+    }
   }
 
   private def scrape(driver: HtmlUnitDriver): Unit = {
@@ -33,8 +84,12 @@ object App {
         //println(headerElem.findElement(By.className("js-cassetLinkHref")).getText)
         println("House name: " + getHouseName(headerElem))
         println("URL of house info: " + getHouseURL(headerElem))
-        println("House image: " + getImage(propertyElem))
+        //println("House image: " + getImage(propertyElem))
         println("House rent:" + getRent(propertyElem).replaceAll("\n", "/"))
+        println("----------------------")
+
+        println("Images are the following:")
+        showRoomImages(getRoomImages(propertyElem))
         println("----------------------")
 
         println("House other rent:" + getOtherRnet(propertyElem).replaceAll("\n", "/"))
@@ -59,11 +114,26 @@ object App {
   private def getImage(propertyWe: WebElement): String =
       propertyWe.findElement(By.className("js-linkImage")).getAttribute("rel")
 
-  /*
-  private def getImages(propertyWe: WebElement): Unit =
-    val tmp : util.ArrayList[String] = By.findElements(By.className("js-linkImage"))
+/*
+  private def getImages(propertyWe: WebElement): java.util.List[WebElement] =
+    propertyWe.findElements(By.className("js-linkImage"))
 */
-  
+
+  /*
+  private def showAllImages(propertyWe: WebElement): Unit =
+    propertyWe.findElements(By.className("js-linkImage"))
+      .asScala.zipWithIndex.foreach{ e =>
+      println((e._2 + 1).toString + ":" + e._1.getAttribute("rel"))
+    }
+*/
+  private def getRoomImages(propertyWe: WebElement): mutable.Buffer[(WebElement)] =
+    propertyWe.findElements(By.className("js-linkImage")).asScala
+
+  private def showRoomImages(targetList: mutable.Buffer[(WebElement)]): Unit =
+    targetList.zipWithIndex.foreach {
+      e => println((e._2 + 1).toString + ":" + e._1.getAttribute("rel"))
+    }
+
   private def getRent(propertyWe: WebElement): String =
     propertyWe.findElement(By.className("detailbox-property--col1")).getText
 
