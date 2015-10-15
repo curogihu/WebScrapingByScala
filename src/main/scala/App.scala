@@ -27,7 +27,8 @@ object App {
     val htmlTuple: (List[WebElement], List[WebElement]) = getContents(driver)
 
     println("--- Web scraping [start] --------")
-    showContents(htmlTuple._1, htmlTuple._2)
+    //showContents(htmlTuple._1, htmlTuple._2)
+    showContents(htmlTuple)
     println("--- Web scraping [ end ] --------")
   }
 
@@ -47,7 +48,12 @@ object App {
   }
 
   // rewrite for easily using on Play2 framework
-  private def showContents(headers: List[WebElement], properties: List[WebElement]) = {
+  //private def showContents(headers: List[WebElement], properties: List[WebElement]) = {
+  private def showContents(targetHtmlTuple: (List[WebElement], List[WebElement])) = {
+
+    val headers = targetHtmlTuple._1
+    val properties = targetHtmlTuple._2
+
     // show each room contents
     for(header <- headers; property <- properties){
       println("House name: " + getHouseName(header))
